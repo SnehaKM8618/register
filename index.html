@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Registration Form</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Application / Registration Form</h1>
+    <form id="regForm" action="process.php" method="post" enctype="multipart/form-data">
+      
+      <div class="row"><label>Full Name *</label><input type="text" name="full_name" required></div>
+      <div class="row"><label>Date of Birth *</label><input type="date" name="dob" required></div>
+
+      <div class="row">
+        <label>Gender *</label>
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="row"><label>Email *</label><input type="email" name="email" required></div>
+      <div class="row"><label>Phone *</label>
+        <input type="tel" name="phone" maxlength="10" pattern="[0-9]{10}" required placeholder="Enter 10-digit number">
+      </div>
+
+      <div class="row"><label>Father's Name *</label><input type="text" name="father_name" required></div>
+      <div class="row"><label>Mother's Name *</label><input type="text" name="mother_name" required></div>
+      <div class="row"><label>Enrollment No. *</label><input type="text" name="enrollment_no" required></div>
+
+      <div class="row"><label>Course *</label>
+        <select name="course" required>
+          <option value="">Select Course</option>
+          <option>B.Tech</option>
+          <option>MCA</option>
+          <option>BCA</option>
+          <option>M.Tech</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="row"><label>Semester *</label><input type="text" name="semester" required></div>
+
+      <div class="row"><label>Address *</label><textarea name="address" rows="2" required></textarea></div>
+      <div class="row"><label>City *</label><input type="text" name="city" required></div>
+      <div class="row"><label>State *</label><input type="text" name="state" required></div>
+      <div class="row"><label>Country *</label><input type="text" name="country" required></div>
+
+      <div class="row"><label>Pincode *</label>
+        <input type="text" name="pincode" maxlength="6" pattern="[0-9]{6}" required placeholder="Enter 6-digit code">
+      </div>
+
+      <div class="row"><label>Blood Group *</label>
+        <select name="blood_group" required>
+          <option value="">Select</option>
+          <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+          <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+        </select>
+      </div>
+
+      <div class="row"><label>Skills (comma separated) *</label><input type="text" name="skills" required></div>
+      <div class="row"><label>Hobbies *</label><input type="text" name="hobbies" required></div>
+
+      <div class="row"><label>Profile Picture (jpg/png, max 2MB) *</label><input type="file" name="profile_pic" accept="image/*" required></div>
+
+      <div class="row terms">
+        <label><input type="checkbox" id="agree" required> I confirm that the information provided is correct.</label>
+      </div>
+
+      <div class="row">
+        <button type="submit" id="submitBtn">Submit Application</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

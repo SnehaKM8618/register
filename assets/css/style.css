@@ -1,0 +1,15 @@
+/* style.css - clean black & white aesthetic with spacing */
+*{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+body{background:#cbe5e8;color:#111;margin:0;padding:30px}
+.container{max-width:820px;margin:0 auto;background:#ffffff;padding:28px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,0.08)}
+h1{text-align:center;margin:0 0 18px;font-size:24px;letter-spacing:0.3px}
+.row{display:flex;flex-direction:column;margin-bottom:12px}
+.row label{font-weight:600;margin-bottom:6px}
+.row input[type="text"], .row input[type="email"], .row input[type="tel"], .row input[type="date"], .row input[type="file"], .row textarea, .row select{padding:10px;border:1px solid #ddd;border-radius:8px;font-size:14px}
+.row textarea{resize:vertical}
+.row.terms{flex-direction:row;align-items:center}
+button#submitBtn{background:#ff0000;color:#fff;padding:11px 18px;border:0;border-radius:10px;font-weight:700;cursor:pointer;align-self:flex-start}
+button#submitBtn:hover{opacity:0.95}
+
+/* Responsive */
+@media (max-width:600px){.container{padding:18px}}
